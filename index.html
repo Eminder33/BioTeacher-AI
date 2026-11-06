@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101713" />
+  <title>BioTeacher AI — твій учитель біології</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#">
+        <span class="brand-mark">✳</span>
+        <span>BioTeacher<span class="brand-ai"> AI</span></span>
+      </a>
+      <div class="side-label">НАВЧАННЯ</div>
+      <button class="nav-item active"><span>◈</span> Мій урок</button>
+      <button class="nav-item" id="clearChat"><span>＋</span> Новий діалог</button>
+      <div class="side-label topics-label">ТЕМИ 9 КЛАСУ</div>
+      <button class="topic-link" data-topic="Поясни будову клітини та функції її органел.">Клітина та її органели</button>
+      <button class="topic-link" data-topic="Навчи мене генетики: гени, алелі та спадковість.">Основи генетики</button>
+      <button class="topic-link" data-topic="Поясни еволюцію та природний добір.">Еволюція</button>
+      <button class="topic-link" data-topic="Розкажи про регуляцію функцій організму людини.">Організм людини</button>
+      <div class="sidebar-bottom">
+        <div class="level-card">
+          <span class="level-icon">🌿</span>
+          <div><strong>Рівень: 9 клас</strong><small>Навчаємося у своєму темпі</small></div>
+        </div>
+        <div class="sidebar-foot">Твій простір для цікавих відкриттів</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">✳</span> BioTeacher AI</div>
+        <div class="top-status"><span class="status-dot"></span> Учитель онлайн</div>
+        <button class="icon-button" id="soundToggle" title="Увімкнути або вимкнути озвучування" aria-label="Озвучування">♫</button>
+      </header>
+
+      <section class="welcome" id="welcome">
+        <div class="eyebrow"><span class="spark">✦</span> ТВОЯ БІОЛОГІЯ — БЕЗ НУДЬГИ</div>
+        <h1>Привіт! Що сьогодні<br><span>досліджуємо?</span></h1>
+        <p>Я твій ШІ-вчитель біології. Поясню складне простими словами,<br class="desktop-break"> допоможу підготуватися до уроків і перевірю твої знання.</p>
+        <div class="quick-grid">
+          <button class="quick-card" data-topic="Проведи зі мною короткий урок про клітину."><span class="quick-icon green">⌬</span><strong>Вивчити тему</strong><small>Пояснення крок за кроком</small><span class="card-arrow">↗</span></button>
+          <button class="quick-card" data-topic="Проведи для мене тест із біології за 9 клас, став по одному запитанню."><span class="quick-icon purple">✎</span><strong>Пройти тест</strong><small>Перевір свої знання</small><span class="card-arrow">↗</span></button>
+          <button class="quick-card" data-topic="Допоможи мені повторити складну тему з біології. Спочатку запитай, що саме мені незрозуміло."><span class="quick-icon amber">⟳</span><strong>Повторити</strong><small>Закріпити вивчене</small><span class="card-arrow">↗</span></button>
+        </div>
+      </section>
+
+      <section class="chat-area" id="chatArea">
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <section class="composer-wrap">
+        <div class="listening-note" id="listeningNote">Слухаю тебе…</div>
+        <form class="composer" id="chatForm">
+          <textarea id="messageInput" rows="1" placeholder="Запитай про біологію або натисни на мікрофон…" aria-label="Твоє повідомлення"></textarea>
+          <div class="composer-actions">
+            <span class="voice-hint" id="voiceHint">Можеш говорити або писати</span>
+            <button class="mic-button" id="micButton" type="button" title="Говорити" aria-label="Говорити">🎙</button>
+            <button class="send-button" type="submit" aria-label="Надіслати">↑</button>
+          </div>
+        </form>
+        <div class="disclaimer">BioTeacher AI може помилятися — важливі факти звіряй із підручником.</div>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
